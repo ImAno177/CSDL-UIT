@@ -10,7 +10,7 @@ SELECT HoTen, Email FROM ChuyenGia;
 SELECT TenCongTy, SoNhanVien FROM CongTy;
 
 -- 54. Liệt kê tên các dự án đang trong trạng thái 'Đang thực hiện'.
-SELECT TenDuAn FROM DuAn WHERE TrangThai = 'Đang thực hiện';
+SELECT TenDuAn FROM DuAn WHERE TrangThai = N'Đang thực hiện';
 
 -- 55. Hiển thị tên và loại của tất cả các kỹ năng.
 SELECT TenKyNang, LoaiKyNang FROM KyNang;
@@ -25,13 +25,13 @@ SELECT TenCongTy, LinhVuc FROM CongTy WHERE SoNhanVien > 150;
 SELECT TenDuAn FROM DuAn WHERE YEAR(NgayBatDau) = 2023;
 
 -- 59. Hiển thị tên kỹ năng thuộc loại 'Công cụ'.
-SELECT TenKyNang FROM KyNang WHERE LoaiKyNang = 'Công cụ';
+SELECT TenKyNang FROM KyNang WHERE LoaiKyNang = N'Công cụ';
 
 -- 60. Liệt kê họ tên và số năm kinh nghiệm của các chuyên gia có trên 5 năm kinh nghiệm.
 SELECT HoTen, NamKinhNghiem FROM ChuyenGia WHERE NamKinhNghiem > 5;
 
 -- 61. Hiển thị tên công ty và địa chỉ của các công ty trong lĩnh vực 'Phát triển phần mềm'.
-SELECT TenCongTy, DiaChi FROM CongTy WHERE LinhVuc = 'Phát triển phần mềm';
+SELECT TenCongTy, DiaChi FROM CongTy WHERE LinhVuc = N'Phát triển phần mềm';
 
 -- 62. Liệt kê tên các dự án có ngày kết thúc trong năm 2023.
 SELECT TenDuAn FROM DuAn WHERE YEAR(NgayKetThuc) = 2023;
@@ -61,7 +61,7 @@ SELECT TOP 5 HoTen, Email FROM ChuyenGia ;
 SELECT TenCongTy FROM CongTy WHERE TenCongTy LIKE '%Tech%';
 
 -- 71. Hiển thị tên dự án và trạng thái, không bao gồm các dự án đã hoàn thành.
-SELECT TenDuAn, TrangThai FROM DuAn WHERE TrangThai != 'Hoàn thành';
+SELECT TenDuAn, TrangThai FROM DuAn WHERE TrangThai != N'Hoàn thành';
 
 -- 72. Liệt kê họ tên và chuyên ngành của các chuyên gia, sắp xếp theo chuyên ngành và họ tên.
 SELECT HoTen, ChuyenNganh FROM ChuyenGia ORDER BY ChuyenNganh, HoTen;
